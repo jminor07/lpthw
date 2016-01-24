@@ -1,5 +1,5 @@
 cars = 100
-space_in_car = 4.0
+space_in_car = 4.0  # float because of the decimal point
 drivers = 30
 passengers = 90
 cars_not_driven = cars - drivers
@@ -15,4 +15,6 @@ print "We can transport", carpool_capacity, "people today."
 print "We have", passengers, "to carpool today."
 print "We need to put about", average_passengers_per_car, "in each car."
 
-
+# study drill question:
+# you get this error because the variable "car_pool_capacity" was never defined.
+# Zed probably forgot the assignment operator.
