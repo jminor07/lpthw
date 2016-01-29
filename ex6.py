@@ -2,7 +2,7 @@
 
 # I'm not quite sure why Zed teaches this and then teaches the .format() way later on.
 
-# old binary joke because 2 in binary is 10. Meant to confuse people that thing 10 is in decimal and not in binary. 
+# old binary joke because 2 in binary is 10. Meant to confuse people that thing 10 is in decimal and not in binary.
 x = "There are %d types of people." % 10
 binary = "binary"
 do_not = "don't"
