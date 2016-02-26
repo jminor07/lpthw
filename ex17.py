@@ -37,7 +37,7 @@ script, from_file, to_file = argv
 # in_file.close()
 
 # As Zed says we could really put the entire script on a single line.
-# It might not be the most readable code(at least for a novice like me), but it can be done.
+# It might not be the most readable code(at least for an amateur like me), but it can be done.
 
 open(to_file, 'w').write(open(from_file).read())
 
