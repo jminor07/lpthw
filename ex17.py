@@ -1,7 +1,7 @@
 from sys import argv
 # from os.path import exists
 
-#reading in from the command line 
+# reading in from the command line
 script, from_file, to_file = argv
 
 # print "Copying from %s to %s" % (from_file, to_file)
