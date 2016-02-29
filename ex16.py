@@ -51,4 +51,4 @@ target.close()
 
 
 # it is redundant to user .truncate() when we opened the file with write privileges.
-# this is because opening in write mode will overwrite the file. 
+# this is because opening in write mode will overwrite the file.
