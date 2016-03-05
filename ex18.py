@@ -9,7 +9,7 @@ def print_two(*args):
 
 # We don't really need to do it that way
 # instead of unpacking args like in "print_two()"
-# we can just give them as arguments for the function. 
+# we can just give them as arguments for the function.
 def print_two_again(arg1, arg2):
     print "arg1: %r, arg2: %r" % (arg1, arg2)
 
