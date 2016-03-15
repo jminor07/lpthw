@@ -3,10 +3,10 @@ from sys import argv  # this is an import statement. 'argv' is the argument vari
 # this "unpacks" argv to four variables.
 script, first, second, third = argv
 
-print "The script is called:", script
-print "Your first variable is:", first
-print "Your second variable is:", second
-print "Your third variable is:", third
+print "The script is called:", script  # we are printing the variable that we got from the user.
+print "Your first variable is:", first  # we are printing the variable that we got from the user.
+print "Your second variable is:", second  # we are printing the variable that we got from the user.
+print "Your third variable is:", third  # we are printing the variable that we got from the user.
 
 
 # Zed says these things are called modules and will refer to them as that from here on out.
@@ -24,8 +24,11 @@ print "Your third variable is:", third
 favorite_animal = raw_input("please enter the name of your favorite animal:")
 
 # the correct answer is always a tiger. We can entertain the user for a moment like it's not.
+# we are printing the the first variable and then making it "Tiger" no matter what.
 print "your {0} favorite animal is a {1}".format(first, "Tiger")
 
+
+# we will actually print the users input as their favorite animal
 print "Ok, I was joking before. Your {0} favorite animal is a {1}".format(first, favorite_animal)
 
 # Zed says to remember that modules give us features.

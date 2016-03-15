@@ -14,6 +14,7 @@
 
 # as we learned in ex12 we can put the string inside the raw_input function.
 # print "enter two numbers between 0 and 100 that you would like to multiply."
+# can use split() method to get two inputs as one.
 temp1, temp2 = raw_input("enter two numbers between 0 and 100 that you would like to multiply.").split()
 
 # casting as a float to be able to do the comparison

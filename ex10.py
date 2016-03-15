@@ -21,10 +21,10 @@ I'll do a list:
 \t* Catnip\n\t* Grass
 """
 
-print tabby_cat
-print persian_cat
-print backslash_cat
-print fat_cat
+print tabby_cat  # printing out the variables
+print persian_cat  # printing out the variables
+print backslash_cat  # printing out the variables
+print fat_cat  # printing out the variables
 
 # Zed shows us this fun code to try out:
 # while True:
@@ -35,6 +35,7 @@ print fat_cat
 # However, it makes a pretty spinning backslash when you run it in the terminal.
 
 # Zed shows us some other escape sequences:
+# here we are using all the escape sequences that Zed showed us.
 print """
 We can use \\ this and \' and \"
 or even \a and one of these: \b, \f, \n
