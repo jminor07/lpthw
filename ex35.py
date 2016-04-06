@@ -6,12 +6,19 @@ def gold_room():
     print "This room is full of gold. How much do you take?"
 
     choice = raw_input("> ")
-    # check to make sure you have an actual number and not just a string of letters!
-    if "0" in choice or "1" in choice:
-        how_much = int(choice)  # casting choice as an integer
-    else:
-        # we can use a different function within a different function!
-        dead("Man, learn to type a number.")
+
+    # Solution I found to check if a user has entered an int or not.
+    try:
+        how_much = int(choice)
+    except ValueError:
+        print("That's not an int!")
+        dead("you goon!")
+
+    # if "0" in choice or "1" in choice:
+    #     how_much = int(choice)  # casting choice as an integer
+    # else:
+    #     # we can use a different function within a different function!
+    #     dead("Man, learn to type a number.")
 
     # a comparison to see if their greedy or not.
     if how_much < 50:
