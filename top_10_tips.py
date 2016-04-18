@@ -132,4 +132,61 @@ for i in range(10):
 
 
 counter = {}
+bag = [2, 3, 1, 2, 5, 6, 7, 9, 2, 7]
+for i in bag:
+    counter[i] = counter.get(i, 0) + 1
+
+for i in range(10):
+    print("Count of {}: {}".format(i, counter.get(i, 0)))
+
+
+# here's a simpler but costlier way
+bag = [2, 3, 1, 2, 5, 6, 7, 9, 2, 7]
+counter = dict([(num, bag.count(num)) for num in bag])
+
+for i in range(10):
+    print("Count of {}: {}".format(i, counter.get(i, 0)))
+
+# there's also dictionary comprehensions.
+counter = {num: bag.count(num) for num in bag}
+
+# 8. Using Libraries.
+# usually what you're trying to has probably been done.
+# for example
+
+from collections import Counter
+bag = [2, 3, 1, 2, 5, 6, 7, 9, 2, 7]
+counter = Counter(bag)
+
+for i in range(10):
+    print("Count of {}: {}".format(i, counter[i]))
+
+
+# 9. Slicing through a list.
+bag = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+for elem in bag[:5]:
+    print(elem)
+
+bag = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+for elem in bag[-5:]:
+    print(elem)
+
+# not the best way to do it.
+bag = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+for index, elem in enumerate(bag):
+    if index % 2 == 0:
+        print(elem)
+
+
+# this is the way to get every other element.
+bag = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+for elem in bag[::2]:
+    print(elem)
+
+# or equivalently for ranges
+bag = list(range(0, 10, 2))
+print(bag)
+
+# 10. Tabs vs spaces
+# mixing tabs and spaces in python will lead to a disaster.
 
