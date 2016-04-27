@@ -286,7 +286,7 @@ def fibonacci(n):
         print x
         x, y = y, x + y
 
-    # another example in sci comp
+        # another example in sci comp
 
 
 # simultaneous state updates.
@@ -313,10 +313,117 @@ for name in names[1:]:
     s += ', ' + name
 print s
 
+# this is the best way to do it and is much faster.
 print ', '.join(names)
 
+del names[0]
+names.pop(0)
+names.insert(0, 'Saar')
+
+from collections import deque
+
+# the correct data structure is a deque
+names = deque(['Johnny', 'Griet', 'Tiger'])
+
+del names[0]
+names.popleft()
+names.appendleft('Saar')
+
+# print names
+
+# decorators and context managers.
+# helps separate business logic from administrative logic
+# clean, beautiful tools for factoring code and improving code reuse
+# good naming is essential
+# Spiderman rule: with great power, comes great responsibility!
+
+# using decorators to factor-out administrative logic
+
+# def web_lookup(url, saved={}):
+#     if url in saved:
+#         return saved[url]
+#     page = urllib.urlopen(url).read()
+#     saved[url] = page
+#     return page
+#
+# @cache
+# def web_lookup(url):
+#     return urllib.urlopen(url).read()
+
+# how to open and close files
+f = open('data.txt')
+try:
+    data = f.read()
+finally:
+    f.close()
+
+# this is the new and cool way to do it.
+with open('data.txt') as f:
+    data = f.read()
+
+import threading
+
+# how to use locks
+# make a lock
+lock = threading.Lock()
+
+# old way to use a lock
+lock.acquire()
+try:
+    print 'Critical section 1'
+    print 'Critical section 2'
+finally:
+    lock.release()
 
 
+# new way to use a lock
+with lock:
+    print 'Critical section 1'
+    print 'Critical section 2'
+
+# factor out temporary contexts
+# try:
+#     os.remove('somefile.tmp')
+# except OSError:
+#     pass
+
+# here's a better way to do it.
+# with ignored(OSError):
+#     os.remove('somefile.tmp')
+
+
+# factor out temporary contexts
+# with open('help.txt', 'w') as f:
+#     oldstout = sys.stdout
+#     sys.stdout = f
+#     try:
+#         help(pow)
+#     finally:
+#         sys.stdout = oldstout
+#
+# with open('help.txt', 'w') as f:
+#     with redirect_stdout(f):
+#         help(pow)
+
+
+# concise expressive one-liners
+# two conflicting rules:
+# 1. don't put too much on one line.
+# 2. Don't break atoms of thought into subatomic particles.
+
+# Raymond's rule:
+# One logical line of code equals of one sentence in English.
+
+# list comprehensions and generator expressions.
+
+result = []
+for i in range(10):
+    s = i ** 2
+    result.append(s)
+print sum(result)
+
+# using list comprehension
+print sum([i**2 for i in xrange(10)])
 
 
 
